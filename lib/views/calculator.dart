@@ -10,6 +10,30 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
+  Widget calcbutton(String btnTxt, Color btnColor, Color txtColor) {
+    return Container(
+      child: ElevatedButton(
+        onPressed: () {
+          // function for button press
+        },
+        child: Text(
+          btnTxt,
+          style: TextStyle(
+            color: txtColor,
+            fontSize: 35,
+          ),
+        ),
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(70),
+          ),
+          backgroundColor: btnColor,
+          padding: EdgeInsets.all(10),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +50,36 @@ class _CalculatorState extends State<Calculator> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SingleChildScrollView(),
+            //calculatr display
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    "${0}",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 100,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //button function call
+                calcbutton("AC", Colors.grey, Colors.black),
+                calcbutton("+/-", Colors.grey, Colors.black),
+                calcbutton("%", Colors.grey, Colors.black),
+                calcbutton("/", Colors.amber[700]!, Colors.white),
+                SizedBox(height: 10),
+              ],
+            ),
           ],
         ),
       ),
