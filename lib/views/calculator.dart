@@ -77,9 +77,42 @@ class _CalculatorState extends State<Calculator> {
                 calcbutton("+/-", Colors.grey, Colors.black),
                 calcbutton("%", Colors.grey, Colors.black),
                 calcbutton("/", Colors.amber[700]!, Colors.white),
-                SizedBox(height: 10),
               ],
             ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //button function call
+                calcbutton("7", Colors.grey[850]!, Colors.white),
+                calcbutton("8", Colors.grey[850]!, Colors.white),
+                calcbutton("9", Colors.grey[850]!, Colors.white),
+                calcbutton("x", Colors.amber[700]!, Colors.white),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //button function call
+                calcbutton("4", Colors.grey[850]!, Colors.white),
+                calcbutton("5", Colors.grey[850]!, Colors.white),
+                calcbutton("6", Colors.grey[850]!, Colors.white),
+                calcbutton("-", Colors.amber[700]!, Colors.white),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //button function call
+                calcbutton("1", Colors.grey[850]!, Colors.white),
+                calcbutton("2", Colors.grey[850]!, Colors.white),
+                calcbutton("3", Colors.grey[850]!, Colors.white),
+                calcbutton("+", Colors.amber[700]!, Colors.white),
+              ],
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),
